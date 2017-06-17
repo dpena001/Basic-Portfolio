@@ -12,8 +12,8 @@ p {
 	text-align: justify;
 	line-height: 1.5em;
 	padding-top: 3px;
-	padding-left: 15px;
-	padding-right: 15px;
+	padding-left: 1.5%;
+	padding-right: 1.5%;
 	position: relative;
 }
 
@@ -52,12 +52,23 @@ h4 {
 	padding: 35px;
 }
 
+form label {
+	font-size: 15px;
+	font-family: sans-serif;
+	color: #777;
+	text-align: justify;
+	line-height: 1.5em;
+	padding-top: 3px;
+	padding-left: 1.5%;
+	padding-right: 1.5%;
+	position: relative;
+}
 
 header {
 	margin-top: 8px;
-	width: 960px;
+	width: 100%;
 	height: 100px;
-	border-width: 15px;
+	border-width: 1.5%;
 	background-color: #ffffff;
 	border-color: #cccccc;
 	text-align: center;
@@ -66,14 +77,15 @@ header {
 
 nav {
 	margin-top: 38px;
-	margin-right: 75px;
+	width: 35%;
+	margin-right: 7%;
     float: right;
     position: relative;
 }
 
 nav ul li {
     list-style-type: none;
-    width: 85px;
+    width: 30%;
     float: left; 
 }
 
@@ -91,9 +103,8 @@ li a:hover {
 
 section{
 	margin-top: 18px;
-	margin-left: 80px;
-	width: 500px;
-	height: 330px;
+	margin-left: 8%;
+	width: 52%;
 	background-color: #FFF;
 	text-align: center;
 	float: left;
@@ -101,9 +112,8 @@ section{
 }
 aside {
 	margin-top: 18px;
-	margin-right: 75px;
-	width: 265px;
-	height: 138px;
+	margin-right: 8%;
+	width: 28%;
 	background-color: #FFF;
 	text-align: center;
 	float: right;
@@ -111,21 +121,35 @@ aside {
 
 footer {
 	margin: auto;
-	margin-top: 0px;
-	width: 960px;
+	margin-top: 10px;
+	width: 100%;
 	height: 75px;
 	background-color: #666666; 
 	text-align: center;
-	position: absolute; 
-	top: 458px;
+	position: relative; 
 	left: 0px; 
 }
 
+
+form {
+	width: 100%;
+}
+
+
+form input {
+    width: 50%;
+    padding: 3px 7px;
+    margin: 2px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+ }
+
+
 #logo-header {
-	margin-left: 45px;
+	margin-left: 4.7%;
 	background-image: url("../images/logo-david.png");
-	background-size: 226px 108px;
-	width: 226px;
+	background-size: 86% 108px;
+	width: 24%;
 	height: 100px;
 	position: absolute;
 	top:0px;
@@ -134,7 +158,7 @@ footer {
 #icons {
 	position: relative;
 	float: right;
-	margin-right: 30px;
+	margin-right: 12%;
 }
 
 #icons ul li{
@@ -146,39 +170,40 @@ footer {
      text-decoration: none;
      }
 
-.contacto{
-    margin-top: 0px;
- }
-
-.contacto label{
-    display: block; /* esto es para que el label se sobreponga a la caja de texto */
-    font-weight: bold;
-}
-.contacto div{
-    margin-bottom: 15px; /* esto los separara un poco */
-}
-
-.contacto input[type='submit']{
-    border: 1px solid #CED5D7;
-    box-shadow:0 0 0 3px #EEF5F7;
-    padding: 8px 16px;
-    border-radius: 20px;
-    font-weight: bold;
-    text-shadow: 1px 1px 0px white;
-    background: #e4f1f6; /* fallback para navegadores que no soporten degradados */
-    background: -moz-linear-gradient(top, #e4f1f6 0%, #cfe6ef 100%);
-    background: -webkit-linear-gradient(top, #e4f1f6 0%,#cfe6ef 100%);
-}
-.contacto input[type='submit']:hover{
-    background: #edfcff;
-    background: -moz-linear-gradient(top, #edfcff 0%, #cfe6ef 100%);
-    background: -webkit-linear-gradient(top, #edfcff 0%,#cfe6ef 100%);
-}
-.contacto input[type='submit']:active{
-    background: #cfe6ef;
-    background: -moz-linear-gradient(top, #cfe6ef 0%, #edfcff 100%);
-    background: -webkit-linear-gradient(top, #cfe6ef 0%,#edfcff 100%);
-}
 #cleared{
 	clear: both;
 }
+@media screen and (max-width:960px){
+     body{width:100%;}
+}
+
+
+@media screen and (max-width:900px){
+   
+	nav ul li {
+    clear: both;
+    float: left;
+
+	}
+
+     section {
+     	width:100%;
+     	clear: both;
+     	margin: auto;
+     }
+
+     aside {
+     	width: 100%;
+     	float: left;
+     	margin: auto;
+     }
+
+     footer {
+     	height:60px;
+     }
+    
+    #logo-header{
+    	width: 50%;
+    }   
+
+  }
